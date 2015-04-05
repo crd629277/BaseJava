@@ -1,13 +1,13 @@
 package sort;
 
 
-import com.sort.InsertionSort;
+import com.sort.ShellSort;
 import com.sort.Sort;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class InsertionSortTest {
-     Sort sort = new InsertionSort();
+public class ShellSortTest {
+     Sort sort = new ShellSort();
 
 
     @Test
