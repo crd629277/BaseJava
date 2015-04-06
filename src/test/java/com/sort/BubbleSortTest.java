@@ -1,13 +1,11 @@
-package sort;
+package com.sort;
 
 
-import com.sort.InsertionSort;
-import com.sort.Sort;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class InsertionSortTest {
-     Sort sort = new InsertionSort();
+public class BubbleSortTest {
+     Sort sort = new BubbleSort();
 
 
     @Test
@@ -17,5 +15,10 @@ public class InsertionSortTest {
         int[] expecteds = {13, 27, 38, 49, 49, 52, 65, 76, 97};
         sort.sort(actuals);
         Assert.assertArrayEquals(expecteds, actuals);
+
+        int[] actuals2 = {3, 2, 1, 4};
+        int[] expecteds2 = {1, 2, 3, 4};
+        sort.sort(actuals2);
+        Assert.assertArrayEquals(expecteds2, actuals2);
 }
 }

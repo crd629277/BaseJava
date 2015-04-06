@@ -1,13 +1,11 @@
-package sort;
+package com.sort;
 
 
-import com.sort.BubbleSort;
-import com.sort.Sort;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class BubbleSortTest {
-     Sort sort = new BubbleSort();
+public class QuickSortTest {
+     Sort sort = new QuickSort();
 
 
     @Test
