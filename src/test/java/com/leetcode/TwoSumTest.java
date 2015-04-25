@@ -1,6 +1,5 @@
 package com.leetcode;
 
-import com.leetcode.twosum.TwoSum;
 import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
@@ -10,7 +9,7 @@ public class TwoSumTest extends TestCase {
 
 
     @Test
-    public void testTwoSum() throws Exception {
+    public void testSolution() throws Exception {
 
         int[] numbers = {2, 7, 11, 15};
         int target = 9;
@@ -23,6 +22,9 @@ public class TwoSumTest extends TestCase {
         int[] expected1 = {2, 3};
         int[] result1 = object.twoSum(numbers1, target1);
         Assert.assertArrayEquals(expected1, result1);
+
+        Assert.assertArrayEquals(object.twoSum2(numbers, target), result);
+        Assert.assertArrayEquals(object.twoSum2(numbers1, target1), result1);
 
     }
 }
