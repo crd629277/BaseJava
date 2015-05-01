@@ -7,7 +7,7 @@ import java.util.TimerTask;
  * Created by Chen on 2015/4/23.
  */
 public class CriticalSection {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         final PairManipulator pm1 = new PairManipulator(new PairManager1()),
                 pm2 = new PairManipulator(new PairManager2());
 
