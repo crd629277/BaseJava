@@ -9,26 +9,26 @@ public class ThreeSumClosest {
     public int threeSumClosest(int[] nums, int target) {
         if (nums.length < 3) return 0;
         Arrays.sort(nums);
-        int closest = 0;
         int len = nums.length;
+        int closest = nums[0] + nums[1] + nums[len - 1];
+
         for (int i = 0; i < len-2; i++) {
             int low = i+1, high = len-1;
-            int temp = target - nums[i];
-            int twoSum = nums[low] + nums[high];
             while (low < high) {
-                if (nums[low] + nums[high] > temp) {
-                    high --;
-                    closest = (Math.abs(nums[low] + nums[high]) > twoSum ? twoSum : Math.abs(nums[low] + nums[high]));
-                } else if (nums[low] + nums[high] < temp) {
+                int sum = nums[i] + nums[low] + nums[high];
+                if (sum > target) {
+                    high--;
+                } else if (sum < target) {
                     low++;
-                    closest = (Math.abs(nums[low] + nums[high]) > twoSum ? twoSum : Math.abs(nums[low] + nums[high]));
                 } else {
                     return target;
+                }
+                if (Math.abs(sum - target) < Math.abs(closest - target)) {
+                    closest = sum;
                 }
             }
 
         }
-
         return closest;
     }
 }
