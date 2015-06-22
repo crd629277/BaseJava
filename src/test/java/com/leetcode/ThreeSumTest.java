@@ -11,5 +11,6 @@ public class ThreeSumTest extends TestCase {
     public void testSolution() throws Exception {
 
         System.out.println(object.threeSum(new int[] {-1, 0, 1, 2, -1, -4}));
+        System.out.println(object.threeSum(new int[] {1, -1, -1, 0}));
     }
 }
