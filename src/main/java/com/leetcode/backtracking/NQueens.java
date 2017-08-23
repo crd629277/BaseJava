@@ -28,19 +28,20 @@ public class NQueens {
         }
 
         // 根据行去遍历，设置当前给Q，然后判断是否符合要求，如果符合，递归求解，否则返回上一层调用
+        return  null;
 
     }
 
 
     // 判断数组是否数合法的n皇后问题的解
     private boolean isValided(String[][] queens) {
-
+        return false;
     }
 
 
     // 当是合法的解时，构造当前的解的返回格式
     private List<String> print(String[][] queens) {
-
+        return null;
     }
 
 
