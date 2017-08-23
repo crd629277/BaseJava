@@ -8,7 +8,10 @@ import java.util.Collection;
 public class Singleton {
     private volatile static Singleton instance = null;
 
-//    protected Singleton() {}
+    // 一定要写私有构造函数，否则默认的构造函数时共有的
+    private Singleton() {}
+
+    // 静态工厂方法，返回唯一实例；在创建实例的过程中，多线程调用可能导致创建多个实例，需要同步synchronized
     public static Singleton getInstance() {
         if (instance == null) {
             synchronized (Singleton.class) {
@@ -21,10 +24,9 @@ public class Singleton {
     }
 
     public static void main(String[] args) {
-        Singleton singleton = getInstance();
+        Singleton singleton = Singleton.getInstance();
         System.out.println(singleton);
 
-        Collection collection;
     }
 
 

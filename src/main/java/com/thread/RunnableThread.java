@@ -11,7 +11,6 @@ public class RunnableThread implements Runnable{
         return "#" + Thread.currentThread().getName() + ": "  + countDown;
     }
 
-    @Override
     public void run() {
         while (true) {
             System.out.println(this);

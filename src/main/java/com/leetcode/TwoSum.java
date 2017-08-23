@@ -1,6 +1,8 @@
 package com.leetcode;
 
+import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.Map;
 
 /**
  * Created by Chen on 2015/4/20.
@@ -28,20 +30,27 @@ import java.util.Hashtable;
  */
 public class TwoSum {
 
+    public static void main(String[] args) throws Exception{
+        TwoSum twoSum = new TwoSum();
+        int[] numbers = {2, 7, 11, 15};
+
+        int[] result = twoSum.twoSum(numbers, 18);
+        twoSum.print(result);
+    }
+
     public int[] twoSum(int[] numbers, int target) {
-        int[] result = new int[2];
-        Hashtable<Integer, Integer> table = new Hashtable<Integer, Integer>();
+        Map<Integer, Integer> table = new HashMap<Integer, Integer>();
         for (int i = 0; i < numbers.length; i++) {
+            // 放进Map之前先检查之前的数据是否有符合要求的
             if (table.containsKey(numbers[i])) {
-                result[0] = table.get(numbers[i]) + 1;
-                result[1] = i + 1;
-                break;
+                return new int[] {table.get(numbers[i]), i};
             }
+
             table.put(target - numbers[i], i);
         }
-        print(result);
-        return result;
+        throw  new IllegalArgumentException("not found");
     }
+
 
     public int[] twoSum2(int[] numbers, int target) {
         int[] result = new int[2];

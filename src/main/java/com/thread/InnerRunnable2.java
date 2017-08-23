@@ -9,7 +9,6 @@ public class InnerRunnable2 {
 
     public InnerRunnable2(String name) {
         thread = new Thread(new Runnable() {
-            @Override
             public void run() {
                 while (true) {
                     System.out.println(this);

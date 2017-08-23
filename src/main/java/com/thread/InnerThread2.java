@@ -9,7 +9,6 @@ public class InnerThread2 {
 
     public InnerThread2(String name) {
         thread = new Thread(name) {
-            @Override
             public void run() {
                 while (true) {
                     System.out.println(this);

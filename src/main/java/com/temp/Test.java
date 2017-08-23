@@ -1,5 +1,7 @@
 package com.temp;
 
+import java.util.Stack;
+
 /**
  * Created by chenwinfred on 6/21/15.
  */
@@ -8,17 +10,21 @@ public class Test {
 
     public static void main(String[] args) {
         Test test = new Test();
-        test.unknow(4);
+
+        float x = 1, y = 2, z = 3;
+        System.out.println(y+=((z--)/(++x)));
+
+        System.out.println("x: " + x);
+        System.out.println("y: " + y);
+        System.out.println("z: " + z);
+
+        String s = "45";
+        System.out.println(Integer.valueOf(s));
+
+        Stack stack = new Stack();
+
     }
 
-    void unknow(int w) {
-        if (w != 0) {
-            unknow(w - 1);
-            for (int i = 1; i <= w; i++) {
-                System.out.print(w);
-            }
-            System.out.println();
-        }
-    }
+
 
 }

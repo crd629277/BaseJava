@@ -18,7 +18,6 @@ public class InnerRunnable1 {
             thread.start();
         }
 
-        @Override
         public void run() {
             while (true) {
                 System.out.println(this);
